@@ -184,3 +184,25 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     document.querySelector('.nav-menu').classList.remove('active');
   });
 });
+let tempoInatividade;
+const TEMPO_MAX = 2 * 60 * 1000; // 2 minutos
+
+function resetarTempo() {
+  clearTimeout(tempoInatividade);
+  tempoInatividade = setTimeout(() => {
+    location.reload();
+  }, TEMPO_MAX);
+}
+
+// Eventos que contam como atividade
+['mousemove', 'mousedown', 'touchstart', 'click', 'scroll', 'keypress'].forEach(event => {
+  window.addEventListener(event, resetarTempo, true);
+});
+
+// Inicia o contador ao carregar
+resetarTempo();
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+    window.location.reload();
+  }
+});
