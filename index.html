@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Clínica médica premium em Luanda, Angola. Agende sua consulta com especialistas qualificados." />
+  <meta name="keywords" content="clínica, saúde, médico, Luanda, Angola, agendamento online" />
+  <meta name="author" content="Clínica Premium" />
+  <title>Clínica Saúde Integral</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Estilos locais -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Pré-carregamento -->
+  <div id="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/244959622160" target="_blank" class="whatsapp-float" aria-label="Fale conosco no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Header fixo -->
+  <header id="header">
+    <svg class="icon-svg icon-hospital" viewBox="0 0 64 64">
+  <rect x="8" y="10" width="48" height="44" rx="4" fill="currentColor"/>
+  <rect x="28" y="18" width="8" height="28" fill="#fff"/>
+  <rect x="18" y="28" width="28" height="8" fill="#fff"/>
+</svg>
+    <div class="container">
+      <div class="logo">
+        <h2>Clínica Saúde Integral</h2>
+      </div>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#medicos">Médicos</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="btn-agendar" onclick="openAgendamentoModal()">Agendar</button>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+  <video
+  id="heroVideo"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="metadata"
+  poster="https://images.unsplash.com/photo-1580281657521-6f6b8b3c9a63?auto=format&fit=crop&w=1600&q=80">
+    <source src="https://cdn.coverr.co/videos/coverr-doctor-and-nurse-walking-9714/1080p.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    
+    <h1>Cuidamos da sua saúde com excelência</h1>
+    <p>Atendimento humanizado, tecnologia de ponta e profissionais qualificados para você e sua família.</p>
+
+    <div class="hero-buttons">
+      <button onclick="openAgendamentoModal()" class="btn-primary">Agendar Consulta</button>
+      <a href="#sobre" class="btn-outline">Conhecer Nossa Clínica</a>
+    </div>
+  </div>
+</section>
+
+  <!-- Sobre Nós -->
+  <section id="sobre" class="section">
+    <div class="container" data-aos="fade-right">
+      <h2>Sobre Nós</h2>
+      <div class="stats" data-aos="fade-up" data-aos-delay="200">
+  <div class="stat-item">
+    <span class="counter" data-target="10000">0</span>
+    <p>Pacientes Atendidos</p>
+  </div>
+  <div class="stat-item">
+    <span class="counter" data-target="15">0</span>
+    <p>Anos de Excelência</p>
+  </div>
+  <div class="stat-item">
+    <span class="counter" data-target="30">0</span>
+    <p>Profissionais</p>
+  </div>
+</div>
+      <div class="sobre-content">
+        <div class="sobre-text">
+          <p>Fundada em 2010, a <strong>Clínica Saúde Integral</strong> é referência em cuidados médicos em Luanda. Nosso compromisso é oferecer um atendimento personalizado, seguro e eficaz.</p>
+          <h3>Missão</h3>
+          <p>Promover saúde com ética, inovação e humanização.</p>
+          <h3>Visão</h3>
+          <p>Ser reconhecida como a melhor clínica multidisciplinar de Angola até 2030.</p>
+        </div>
+        <div class="sobre-img">
+           <img 
+    src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80" 
+    alt="Equipe Médica da Clínica"
+  >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="section bg-light">
+    <div class="container" data-aos="fade-up">
+      <svg class="icon-svg icon-heart" viewBox="0 0 64 64">
+  <path d="M32 54s-18-12-18-26c0-6 5-10 10-10 4 0 7 2 8 5 1-3 4-5 8-5 5 0 10 4 10 10 0 14-18 26-18 26z"
+        fill="currentColor"/>
+</svg>
+      <h2>Nossos Serviços</h2>
+      <div class="cards">
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+          <i class="fas fa-heartbeat"></i>
+          <h3>Cardiologia</h3>
+          <p>Avaliação completa do sistema cardiovascular com equipamentos modernos.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+          <i class="fas fa-brain"></i>
+          <h3>Neurologia</h3>
+          <p>Diagnóstico e tratamento de distúrbios neurológicos.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">
+          <i class="fas fa-baby"></i>
+          <h3>Pediatria</h3>
+          <p>Cuidado integral para crianças desde o nascimento.</p>
+        </div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="400">
+          <i class="fas fa-user-md"></i>
+          <h3>Clínica Geral</h3>
+          <p>Primeiro atendimento com avaliação completa e encaminhamentos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corpo Clínico -->
+  <section id="medicos" class="section">
+    <div class="container" data-aos="fade-up">
+      <svg class="icon-svg icon-doctor" viewBox="0 0 64 64">
+  <circle cx="32" cy="18" r="10" fill="currentColor"/>
+  <path d="M12 54c0-11 9-20 20-20s20 9 20 20" fill="currentColor"/>
+  <rect x="29" y="32" width="6" height="12" fill="#fff"/>
+  <rect x="26" y="35" width="12" height="6" fill="#fff"/>
+</svg>
+      <h2>Nossa Equipe Médica</h2>
+      <div class="cards">
+        <div class="card-medico" data-aos="fade-up" data-aos-delay="100">
+         <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80" alt="Médico especialista em consulta">
+          <h3>Dr. João Enoc Sacassole</h3>
+          <p class="especialidade">Médico Cirurgião</p>
+          <p>CRM: 12345 | +15 anos de experiência</p>
+        </div>
+        <div class="card-medico" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80" alt="Médica especialista em consultório">
+          <h3>Dr. Principe Oliveira</h3>
+          <p class="especialidade">Neurocirurgião</p>
+          <p>CRM: 67890 | Especialista em Neurocirurgia</p>
+        </div>
+        <div class="card-medico" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=600&q=80" alt="Médico em ambiente hospitalar">
+          <h3>Dr. João Lima</h3>
+          <p class="especialidade">Neurologista</p>
+          <p>CRM: 24680 | Mestre em Neurociência</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="corpo-clinico" class="section">
+  <div class="container">
+    <h2 class="section-title">Corpo Clínico Especializado</h2>
+    <p class="section-subtitle">
+      Profissionais altamente qualificados, com experiência comprovada e foco total no bem-estar do paciente.
+    </p>
+
+    <div class="medicos-grid">
+
+      <!-- Médico 1 -->
+      <div class="medico-card">
+        <div class="medico-img">
+          <img 
+            src="https://images.unsplash.com/photo-1550831107-1553da8c8464?auto=format&fit=crop&w=600&q=80" 
+            alt="Dr. Carlos Silva - Cardiologista">
+        </div>
+
+        <div class="medico-info">
+          <h3>Dr. Carlos Silva</h3>
+          <span class="especialidade">Cardiologista</span>
+
+          <ul class="credenciais">
+            <li>✔ Graduação em Medicina – Univ. Agostinho Neto</li>
+            <li>✔ Especialização em Cardiologia</li>
+            <li>✔ Mais de 15 anos de experiência clínica</li>
+            <li>✔ Atendimento humanizado e preciso</li>
+          </ul>
+
+          <button onclick="openAgendamentoModal()" class="btn-medico">Agendar com este especialista</button>
+        </div>
+      </div>
+
+      <!-- Médico 2 -->
+      <div class="medico-card">
+        <div class="medico-img">
+          <img 
+            src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" 
+            alt="Dra. Marta Oliveira - Pediatra">
+        </div>
+
+        <div class="medico-info">
+          <h3>Dra. Marta Oliveira</h3>
+          <span class="especialidade">Pediatra</span>
+
+          <ul class="credenciais">
+            <li>✔ Especialista em Neonatologia</li>
+            <li>✔ Formação contínua internacional</li>
+            <li>✔ Atendimento cuidadoso e empático</li>
+            <li>✔ Referência em saúde infantil</li>
+          </ul>
+
+          <button onclick="openAgendamentoModal()" class="btn-medico">Agendar com esta especialista</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section id="porque-escolher" class="section">
+  <div class="container">
+    <h2 class="section-title">Por que escolher a nossa clínica?</h2>
+    <p class="section-subtitle">
+      Mais do que consultas, oferecemos confiança, cuidado humano e excelência médica em cada atendimento.
+    </p>
+
+    <div class="beneficios-grid">
+
+      <div class="beneficio-card">
+        <svg class="icon-svg icon-azul" viewBox="0 0 24 24">
+          <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <h3>Localização Estratégica</h3>
+        <p>Fácil acesso, ambiente seguro e infraestrutura pensada para o seu conforto.</p>
+      </div>
+
+      <div class="beneficio-card">
+        <svg class="icon-svg icon-verde" viewBox="0 0 24 24">
+          <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2z"/>
+          <path d="M9 12l2 2 4-4"/>
+        </svg>
+        <h3>Atendimento Eficiente</h3>
+        <p>Processos rápidos, menos espera e foco total na solução do seu problema.</p>
+      </div>
+
+      <div class="beneficio-card">
+        <svg class="icon-svg icon-azul" viewBox="0 0 24 24">
+          <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/>
+        </svg>
+        <h3>Excelência Médica</h3>
+        <p>Equipe experiente, certificada e atualizada com as melhores práticas clínicas.</p>
+      </div>
+
+      <div class="beneficio-card">
+        <svg class="icon-svg icon-verde" viewBox="0 0 24 24">
+          <path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10z"/>
+        </svg>
+        <h3>Cuidado Humanizado</h3>
+        <p>Respeito, empatia e atenção real às necessidades de cada paciente.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Depoimentos -->
+  <section id="depoimentos" class="section bg-light">
+    <div class="container" data-aos="fade-up">
+      <svg class="icon-svg icon-ambulance" viewBox="0 0 64 64">
+  <rect x="4" y="28" width="40" height="18" rx="2" fill="currentColor"/>
+  <rect x="44" y="32" width="16" height="14" rx="2" fill="currentColor"/>
+  <circle cx="18" cy="50" r="4" fill="#000"/>
+  <circle cx="46" cy="50" r="4" fill="#000"/>
+  <rect x="20" y="32" width="6" height="10" fill="#fff"/>
+  <rect x="17" y="35" width="12" height="4" fill="#fff"/>
+</svg>
+      <h2>O Que Dizem Nossos Pacientes</h2>
+      <div class="carousel">
+        <div class="slide active">
+          <p>"Atendimento impecável! Fui recebido com carinho e resolvi meu problema em uma única consulta."</p>
+          <h4>– Ana Rita, Luanda</h4>
+        </div>
+        <div class="slide">
+          <p>"A Dra. Marta salvou a vida do meu filho. Gratidão eterna à equipe!"</p>
+          <h4>– José Manuel, Viana</h4>
+        </div>
+        <div class="slide">
+          <p>"Modernidade, limpeza e profissionalismo. Recomendo a todos!"</p>
+          <h4>– Carla Mendes, Talatona</h4>
+        </div>
+      </div>
+      <div class="carousel-nav">
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </div>
+  </section>
+  
+<section id="provas" class="section provas-section">
+  <div class="container">
+
+    <div class="provas-header" data-aos="fade-up">
+      <h2>Por que milhares de pacientes confiam em nós</h2>
+      <p>Resultados reais, atendimento humanizado e padrões médicos de excelência.</p>
+    </div>
+
+    <div class="provas-grid">
+
+      <!-- BLOCO IMAGEM -->
+      <div class="provas-imagem" data-aos="fade-right">
+        <img 
+          src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80"
+          alt="Atendimento médico humanizado"
+        >
+      </div>
+
+      <!-- BLOCO CONTEÚDO -->
+      <div class="provas-conteudo" data-aos="fade-left">
+
+        <ul class="provas-lista">
+          <li>
+            <strong>+10.000</strong>
+            <span>pacientes atendidos com excelência</span>
+          </li>
+          <li>
+            <strong>4.9★</strong>
+            <span>avaliação média dos nossos pacientes</span>
+          </li>
+          <li>
+            <strong>15 anos</strong>
+            <span>de experiência clínica comprovada</span>
+          </li>
+          <li>
+            <strong>98%</strong>
+            <span>de satisfação em nossos atendimentos</span>
+          </li>
+        </ul>
+
+        <div class="provas-depoimento">
+          <p>
+            “Desde a recepção até o atendimento médico, tudo foi impecável.
+            Profissionalismo, empatia e rapidez.”
+          </p>
+          <span>— Paciente verificado, Luanda</span>
+        </div>
+
+        <button onclick="openAgendamentoModal()" class="btn-primary">
+          Agendar consulta com segurança
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="certificacoes" class="section certificacoes-section">
+  <div class="container">
+
+    <div class="cert-header" data-aos="fade-up">
+      <h2>Certificações & Protocolos de Excelência</h2>
+      <p>Seguimos rigorosamente padrões médicos reconhecidos para garantir segurança,
+        qualidade e confiança em cada atendimento.</p>
+    </div>
+
+    <div class="cert-grid">
+
+      <!-- IMAGEM -->
+      <div class="cert-imagem" data-aos="fade-right">
+        <img
+          src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?auto=format&fit=crop&w=1200&q=80"
+          alt="Padrões e protocolos médicos"
+        >
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="cert-conteudo" data-aos="fade-left">
+
+        <ul class="cert-lista">
+          <li>
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <strong>Protocolos de Segurança Clínica</strong>
+              <span>Processos rigorosos para prevenção de riscos e segurança do paciente.</span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-user-md"></i>
+            <div>
+              <strong>Equipe Médica Certificada</strong>
+              <span>Profissionais registrados, atualizados e qualificados.</span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-microscope"></i>
+            <div>
+              <strong>Equipamentos Homologados</strong>
+              <span>Tecnologia moderna e certificada para diagnósticos precisos.</span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-file-contract"></i>
+            <div>
+              <strong>Conformidade Legal & Ética</strong>
+              <span>Respeito total às normas de privacidade e boas práticas médicas.</span>
+            </div>
+          </li>
+        </ul>
+
+        <div class="cert-cta">
+          <p>
+            Atendemos com responsabilidade, transparência e compromisso com a vida.
+          </p>
+          <a href="#tecnologia" class="btn-primary">
+            Conhecer nossa estrutura clínica
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="tecnologia" class="section tecnologia-section">
+  <div class="container">
+
+    <div class="tec-header" data-aos="fade-up">
+      <h2>Tecnologia & Estrutura de Alto Padrão</h2>
+      <p>
+        Investimos continuamente em tecnologia médica, conforto e segurança
+        para oferecer diagnósticos precisos e um atendimento superior.
+      </p>
+    </div>
+
+    <div class="tec-grid">
+
+      <!-- CONTEÚDO -->
+      <div class="tec-conteudo" data-aos="fade-right">
+
+        <ul class="tec-lista">
+          <li>
+            <i class="fas fa-x-ray"></i>
+            <div>
+              <strong>Equipamentos de Diagnóstico Modernos</strong>
+              <span>
+                Tecnologia avançada para exames rápidos, seguros e confiáveis.
+              </span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-laptop-medical"></i>
+            <div>
+              <strong>Sistemas Digitais Integrados</strong>
+              <span>
+                Prontuários eletrônicos, agendamento online e gestão eficiente.
+              </span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-procedures"></i>
+            <div>
+              <strong>Ambientes Planejados para Conforto</strong>
+              <span>
+                Consultórios modernos, climatizados e acolhedores.
+              </span>
+            </div>
+          </li>
+
+          <li>
+            <i class="fas fa-shield-virus"></i>
+            <div>
+              <strong>Controle Rigoroso de Higiene</strong>
+              <span>
+                Protocolos de limpeza e biossegurança em todas as áreas.
+              </span>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <div class="tec-imagem" data-aos="fade-left">
+        <img
+          src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80"
+          alt="Tecnologia médica e estrutura moderna"
+        >
+      </div>
+
+    </div>
+
+  </div>
+</section>
+  <!-- Modal de Agendamento -->
+  <div id="agendamento-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAgendamentoModal()">&times;</span>
+      <svg class="icon-svg icon-kit" viewBox="0 0 64 64">
+  <rect x="10" y="20" width="44" height="30" rx="4" fill="currentColor"/>
+  <rect x="24" y="12" width="16" height="8" rx="2" fill="currentColor"/>
+  <rect x="30" y="28" width="4" height="14" fill="#fff"/>
+  <rect x="25" y="33" width="14" height="4" fill="#fff"/>
+</svg>
+      <h2>Agendar Consulta</h2>
+      <form id="form-agendamento">
+        <input type="text" id="nome" placeholder="Nome Completo" required />
+        <input type="tel" id="telefone" placeholder="Telefone (ex: 959 622 160)" required />
+        <input type="email" id="email" placeholder="E-mail" required />
+        <select id="especialidade" required>
+          <option value="">Selecione a especialidade</option>
+          <option value="Cardiologia">Cardiologia</option>
+          <option value="Pediatria">Pediatria</option>
+          <option value="Neurologia">Neurologia</option>
+          <option value="Clínica Geral">Clínica Geral</option>
+        </select>
+        <input type="date" id="data" required />
+        <input type="time" id="hora" required />
+        <textarea id="mensagem" placeholder="Mensagem opcional"></textarea>
+        <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+      </form>
+      <div id="confirmacao" class="confirmacao"></div>
+    </div>
+  </div>
+    <!-- Contato -->
+  <section id="contato" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2>Localização & Contato</h2>
+      <div class="contato-content">
+        <div class="info-contato">
+          <p><i class="fas fa-map-marker-alt"></i> Rua das Acácias, 123 – Luanda, Angola</p>
+          <p><i class="fas fa-phone"></i> +244 959 622 160</p>
+          <p><i class="fas fa-envelope"></i> cybersevsolucaodigital@gmail.com</p>
+          <p><i class="fas fa-clock"></i> Seg–Sex: 08:00–18:00 | Sáb: 08:00–12:00</p>
+        </div>
+        <div class="mapa">
+          <!-- Placeholder do Google Maps -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3948.577344138273!2d13.23474487507594!3d-8.83689649323287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a51f4c7e9e4d3b7%3A0x8f5a8c8a8a8a8a8a!2sLuanda!5e0!3m2!1spt-BR!2sao!4v1704700000000!5m2!1spt-BR!2sao"
+            width="100%"
+            height="300"
+            style="border:0; border-radius: 8px;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h3>Clínica Saúde Integral</h3>
+          <p>Cuidando de você com amor e profissionalismo desde 2010.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Horário</h4>
+          <p>Segunda a Sexta: 08:00–18:00<br>Sábado: 08:00–12:00</p>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociais</h4>
+          <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="cookie-banner" id="cookie-banner">
+        <p>Usamos cookies para melhorar sua experiência. Ao continuar, você aceita nossa <a href="#">Política de Cookies</a>.</p>
+        <button onclick="acceptCookies()">Aceitar</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
