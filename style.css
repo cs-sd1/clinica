@@ -357,7 +357,7 @@ h1, h2, h3, h4 {
   background-color: rgba(0,0,0,0.6);
 }
 .modal-content {
-  background-color: #25D366;
+  background-color: #1E88E5;
   margin: 5% auto;
   padding: 30px;
   border-radius: 16px;
@@ -401,7 +401,7 @@ h1, h2, h3, h4 {
 .confirmacao {
   margin-top: 20px;
   padding: 15px;
-  background: #25D366;
+  background: #1E88E5;
   border-radius: 8px;
   display: none;
   color: #f5f7fa;
